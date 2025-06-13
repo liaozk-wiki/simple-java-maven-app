@@ -12,12 +12,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            cleanWs() // 清理工作空间
-        }
-        success {
-            archiveArtifacts artifacts: 'target/*.jar' // 归档产物
-        }
-    }
 }
